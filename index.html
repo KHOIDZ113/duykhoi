@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylesss.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#">
+            <img src="https://cdn.nba.com/logos/leagues/logo-nba.svg" alt="NBA Logo" class="logo">
+            Home
+        </a>
+        <a href="#teams">Teams</a>
+        <a href="#players">Players</a>
+        <a href="#games">Games</a>
+
+        <!-- Search bar -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
+        </div>
+    </div>
+
+    <!-- Content Sections -->
+    <div class="header">
+        <h1>NBA Website</h1>
+    </div>
+
+    <div class="section" id="teams">
+        <h2>NBA Teams</h2>
+        <div class="teams" id="teams-list"></div>
+    </div>
+
+    <div class="section" id="players">
+        <h2>NBA Players</h2>
+        <div class="players" id="players-list"></div>
+    </div>
+
+    <div class="section" id="games">
+        <h2>NBA Games</h2>
+        <div class="games" id="games-list"></div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
