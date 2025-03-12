@@ -111,3 +111,8 @@ window.onload = () => {
     playersSection.style.display = 'none';
     showTeamsBtn.classList.add('active');
 };
+const teamCard = document.createElement('div');
+teamCard.className = 'card';
+teamCard.innerHTML = `<h3>${team.full_name}</h3><p>City: ${team.city}</p>`;
+document.getElementById('teams-container').appendChild(teamCard);
+

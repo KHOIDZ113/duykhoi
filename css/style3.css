@@ -1,185 +1,177 @@
-
-body {
+/* Reset CSS cơ bản */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
 }
 
-.navbar {
-    background-color: #333;
-    padding: 15px;
+/* Body */
+body {
+    background-color: #f4f4f4;
+    color: #333;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.navbar a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-}
-
-.navbar a:hover {
-    background-color: #555;
-    border-radius: 5px;
-}
-
-h1 {
-    text-align: center;
-    margin: 30px 0;
-}
-
-#games-list {
+/* Header */
+header {
+    background-color: #1d428a;
+    color: white;
+    padding: 15px 30px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.card {
-    background-color: #fff;
-    color: #000;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    width: 300px;
+header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+header .logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 1.5rem;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-/* Căn chỉnh logo */
-.logo {
-    width: 80px; /* Tùy chỉnh theo ý bạn */
-    height: auto;
+    flex: 1;
 }
 
-/* Header ngang với logo và tiêu đề */
-.header-flex {
+/* Navbar */
+nav ul {
+    list-style: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px; /* Khoảng cách giữa logo và chữ */
-    padding: 20px 0;
+    gap: 15px;
 }
 
-/* Tiêu đề không bị sát lề */
-.header-flex h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-/* Navbar style (nếu muốn chỉnh đẹp thêm) */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-}
-
-.navbar a {
+nav ul li a {
     color: white;
-    padding: 14px 20px;
     text-decoration: none;
-    font-weight: bold;
-}
-
-.navbar a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-}
-
-/* Search box trong navbar */
-.search-container input {
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-/* ==== Navbar ==== */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-}
-
-.navbar a {
-    color: white;
-    padding: 10px 16px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.navbar a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-}
-
-/* ==== Search box trong navbar ==== */
-.search-container input {
-    padding: 6px 12px;
+    font-weight: 600;
+    padding: 8px 12px;
     border-radius: 20px;
-    border: 1px solid #ccc;
-    outline: none;
+    transition: background-color 0.3s;
 }
 
-/* ==== Header với logo và tiêu đề ==== */
-.header-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px 0;
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-.logo {
-    width: 80px;
-    height: auto;
+/* Main content */
+main {
+    flex: 1;
+    padding: 30px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Tiêu đề đẹp */
-.header-flex h1 {
-    margin: 0;
-    font-size: 2.5em;
-    color: #222;
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #c9082a;
+    text-align: center;
 }
 
-/* ==== Games List ==== */
-.games {
-    padding: 20px;
+/* Search box */
+.search-box {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 30px;
+    padding: 12px 20px;
+    border: 2px solid #1d428a;
+    border-radius: 25px;
+    font-size: 1rem;
+    display: block;
+    transition: all 0.3s;
+}
+
+.search-box:focus {
+    border-color: #c9082a;
+    box-shadow: 0 0 5px rgba(201, 8, 42, 0.5);
+}
+
+/* Container for cards */
+#teams-container,
+#players-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 25px;
+    margin-bottom: 40px;
 }
 
-/* Card game */
-.game-card {
-    border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-    background-color: white;
-    transition: transform 0.2s ease;
+/* Card style */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.game-card:hover {
-    transform: translateY(-5px);
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
-/* ==== Responsive ==== */
+.card h3 {
+    color: #1d428a;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+    background-color: #1d428a;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .header-flex {
-        flex-direction: column;
+    header h1 {
+        font-size: 1.2rem;
     }
 
-    .navbar {
-        flex-wrap: wrap;
+    nav ul {
+        gap: 10px;
     }
 
-    .search-container {
-        margin-top: 10px;
+    .search-box {
+        max-width: 90%;
     }
 }
 
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 10px 0;
+    }
+
+    nav ul {
+        justify-content: center;
+        padding-top: 10px;
+    }
+}
