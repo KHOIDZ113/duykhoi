@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NBA Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="teams.html">Teams</a>
-        <a href="players.html">Players</a>
-        <a href="games.html">Games</a>
+    <!-- Navbar -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="team&players.html">Teams & Players</a>
+    
+    <a href="games.html">Games</a>
+
+
+    <!-- Avatar sau khi đăng nhập -->
+    <div class="user-avatar" id="user-avatar" style="display: none;">
+        <img src="" alt="Avatar" id="avatar-img">
     </div>
-    <div class="header">
-        <h1>Welcome to NBA Website</h1>
+
+    <!-- Đăng nhập / Đăng ký khi chưa đăng nhập -->
+    <div class="auth-links" id="auth-links">
+        <a href="login.html" class="btn-login">Sign In</a>
+        <a href="signup.html" class="btn-signup">Sign Up</a>
     </div>
+</div>
+<div class="NBA">
+        <img src="https://images.seeklogo.com/logo-png/24/1/nba-logo-png_seeklogo-247736.png" alt="NBA">
+</div>
 </body>
+
 </html>

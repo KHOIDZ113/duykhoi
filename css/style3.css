@@ -1,0 +1,185 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#games-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Căn chỉnh logo */
+.logo {
+    width: 80px; /* Tùy chỉnh theo ý bạn */
+    height: auto;
+}
+
+/* Header ngang với logo và tiêu đề */
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Khoảng cách giữa logo và chữ */
+    padding: 20px 0;
+}
+
+/* Tiêu đề không bị sát lề */
+.header-flex h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Navbar style (nếu muốn chỉnh đẹp thêm) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Search box trong navbar */
+.search-container input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* ==== Navbar ==== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* ==== Search box trong navbar ==== */
+.search-container input {
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* ==== Header với logo và tiêu đề ==== */
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+/* Tiêu đề đẹp */
+.header-flex h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #222;
+}
+
+/* ==== Games List ==== */
+.games {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Card game */
+.game-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    background-color: white;
+    transition: transform 0.2s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+    .header-flex {
+        flex-direction: column;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .search-container {
+        margin-top: 10px;
+    }
+}
+

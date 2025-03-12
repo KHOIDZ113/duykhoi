@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Teams & Players</title>
+    <link rel="stylesheet" href="/css/style2.css">
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="/">
+            <img src="https://byvn.net/Vgv5" alt="NBA Logo" class="logo">
+        </a>
+
+        <h1>NBA Teams and Players</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="show-teams">Teams</a></li>
+                <li><a href="#" id="show-players">Players</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="teams-section">
+            <h2>Teams</h2>
+            <!-- Thanh tìm kiếm cho các đội bóng -->
+            <input type="text" id="search-team" placeholder="Search for a team..." class="search-box">
+            <div id="teams-container"></div>
+        </section>
+
+        <section id="players-section">
+            <h2>Players</h2>
+            <!-- Thanh tìm kiếm cho các cầu thủ -->
+            <input type="text" id="search-player" placeholder="Search for a player..." class="search-box">
+            <div id="players-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NBA. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/team.js"></script>
+</body>
+</html>
